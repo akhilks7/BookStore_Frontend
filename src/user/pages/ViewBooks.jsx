@@ -39,7 +39,8 @@ function ViewBooks() {
     try {
       const result = await makePaymentAPI(bookDetails, reqHeader)
       console.log(result);
-      const checkouturl = result.data.checkoutSessionUrl
+      const checkouturl = result.data.checkoutSessionurl
+
       if (checkouturl) {
         window.location.href = checkouturl;
       }
